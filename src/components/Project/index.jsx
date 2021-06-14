@@ -26,8 +26,6 @@ const Project = styled(({className, src, title, desc}) => {
   justify-content: center;
   align-items: center;
   overflow: hidden;
-  border-radius: 10px;
-  margin-top: 2em;
   position: relative;
   transition: 0.35s;
   &:hover {
@@ -36,17 +34,16 @@ const Project = styled(({className, src, title, desc}) => {
 
 .project-overlay {
   height: 300px;
-  min-width: 350px;
-  background: -webkit-linear-gradient(rgba(0,0,0,.8), rgb(25, 0, 26));
+  width: inherit;
+  background: -webkit-linear-gradient(rgba(0,0,0,.8), rgba(0,0,0,.8));
   position: absolute;
-  bottom: 50%;
+  bottom:0%;
   left: 0;
-  opacity: 0;
+  opacity: .8;
   display: flex;
   flex-flow:column nowrap;
   justify-content: center;
   align-items: center;
-  border-radius: 10px;
   transition: 0.35s;
   color: white;
 }
@@ -65,7 +62,6 @@ const Project = styled(({className, src, title, desc}) => {
   color: white;
 }
 .project-title a:hover {
-  background-color: rgba(0, 0, 0, 0.5);
   color: white;
   border-radius: 0px;
   border: 1px solid transparent;

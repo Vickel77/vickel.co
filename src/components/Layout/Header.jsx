@@ -1,5 +1,6 @@
 import styled from "styled-components";
 // import { Carousel } from "react-responsive-carousel";
+import Carousel from 'nuka-carousel';
 import '../../App.css';
 import Menu from '../Menu';
 
@@ -11,15 +12,39 @@ const Header = styled(({className}) => {
         <div className="header-text">
           <p className="header-text-one">
             <span style={{fontSize:"2em"}}><b>HI!</b></span> <br/>
-            My name is <big><b>KELECHI</b></big>
-            </p>
-          <p className="header-text-two" >
+            My name is <big><b>KELECHI</b></big> <br />
             I am a full stack developer and <br/>
             I love what i <b>do</b>
           </p>
         </div>
-        <div className="dev-guy">
-          <img src="./dev-guy.png" alt="dev guy" />
+        <div className="header-img">
+          <Carousel
+            swiping={true}
+            autoplay={true}
+            autoplayInterval={3000}
+            wrapAround={true}
+            transitionMode="scroll"
+            opacityScale={0}
+            pauseOnHover={false}
+            defaultControlsConfig={{
+              prevButtonStyle: {
+                opacity: '0',
+              },
+              nextButtonStyle: {
+                opacity: '0'
+              },
+              pagingDotsStyle: {
+                fill: "transparent"
+              }
+            }}
+          > 
+            <div className="dev-guy">
+              <img src="./dev-guy.png" alt="dev guy" />
+            </div>
+            <div className="dev-guy">
+              <img src="./dev-dude.png" alt="dev guy" />
+            </div>
+          </Carousel>
         </div>
         {/* <div className="dev-guy">
           <img src="./dev-dude.png" alt="dev guy" />
@@ -30,7 +55,6 @@ const Header = styled(({className}) => {
 })
 `
   width: 100vw;
-  
 
 .header-content {
   border: none;
@@ -42,14 +66,15 @@ const Header = styled(({className}) => {
   text-align: left;
   display: flex;
   flex-direction: row;
-  justify-content: space-around;
+  justify-content: center;
   align-items: center;
   border-radius: 0 0 10px 10px;
 }
 .header-text {
-  transform: translateY(-3em);
+  width:40%;
   height: auto;
   position: relative;
+
 }
 .header-text::after {
   content: "";
@@ -60,17 +85,24 @@ const Header = styled(({className}) => {
   width: 40px;
   background-color: white;
 }
+.header-img {
+  width:30%;
+  display:flex;
+  align-items:flex-end;
+}
 .dev-guy {
+  width:100%;
+  height:100%;
   display:flex;
   justify-content:center;
   align-items:center;
-  overflow-hidden;
+  overflow:hidden;
 }
 @media only screen and (max-width: 600px){
   .header-content {
-    height:100vh;
+    height:85vh;
     display:flex;
-    flex-flow:column wrap;
+    flex-flow:column nowrap;
     justify-content:center;
   }
   .header-text {
@@ -81,7 +113,6 @@ const Header = styled(({className}) => {
     align-items:center;
     text-align:center;
     font-size:0.8em;
-    padding-bottom:20px;
   }
   .header-text p {
     padding:0;
@@ -96,14 +127,12 @@ const Header = styled(({className}) => {
     transform:translateX(-50%);
     height: 3px;
     width: 50px;
-    background-color: white;
+    display:none;
   }
 
-  .header-text, .dev-guy {
-    height:30vh;
-    width:80vw;
-    padding:10px 10px 0;
-    margin:20px auto 0;
+  .header-text, .header-img {
+    height:40vh;
+    width:100vw;
   }
   .dev-img img{
     height:180px;

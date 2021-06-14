@@ -10,9 +10,9 @@ const Projects = styled(({className}) =>{
           title="JAMSELECT" 
           desc="Platfrom for music lover \n find and share the music you love" />
         <Project 
-          src="" 
-          title="HOTR-KD"
-          desc="The mission house is glad to have you"/>
+          src="project-6.jpg" 
+          title="GWOM"
+          desc="We Care for the girl child"/>
         <Project 
           src="project-3.jpg" 
           title="ACCOUNTING WORLD"
@@ -24,9 +24,9 @@ const Projects = styled(({className}) =>{
           desc="Glow from nature"
           />
         <Project 
-          src="dev-guy.png"
-          title="BLOG"
-          desc="Latest updates"
+          src="project-5.jpg"
+          title="HOTR KD"
+          desc="The mission house"
           />
         <Project 
           src="project-4.jpg" 
@@ -46,7 +46,7 @@ const Projects = styled(({className}) =>{
   margin: 0 auto;
   display: flex;
   flex-flow: row wrap;
-  justify-content: space-between;
+  justify-content: center;
 }
   @media (max-width:600px){
     .projects-container {

@@ -1,21 +1,20 @@
 import styled from "styled-components";
 import Projects from "./Projects";
 import DevTools from "./DevTools";
-import Clients from "./Clients";
 
 const Skill = styled(({className, percentage, stack, backEnd}) => {
   return (
     <div className={className}>
-      <div class="percent">
+      <div className="percent">
         <svg className={backEnd}>
           <circle cx="70" cy="70" r="70"></circle>
           <circle cx="70" cy="70" r="70"></circle>
         </svg>
-        <div class="number">
+        <div className="number">
           <h2>{percentage} <span>%</span> </h2>
         </div>
       </div>
-      <h4 class="stat-text">{stack} END DEVELOPMENT</h4>
+      <h4 className="stat-text">{stack} END DEVELOPMENT</h4>
     </div>
   )
 })`
@@ -93,12 +92,12 @@ svg.back-end circle:nth-child(2) {
 
 const SkillsBar = styled(({className}) => {
   return(
-    <div class={className}>
-      HTML <div class="load-bar"><div class="html-bar"></div></div> 
-      CSS <div class="load-bar"><div class="css-bar"></div></div>
-      JAVASCRIPT <div class="load-bar"><div class="bs-bar"></div></div>
-      REACT <div class="load-bar"><div class="react-bar"></div></div>
-      NODE  <div class="load-bar"><div class="node-bar"></div></div>
+    <div className={className}>
+      HTML <div className="load-bar"><div className="html-bar"></div></div> 
+      CSS <div className="load-bar"><div className="css-bar"></div></div>
+      JAVASCRIPT <div className="load-bar"><div className="bs-bar"></div></div>
+      REACT <div className="load-bar"><div className="react-bar"></div></div>
+      NODE  <div className="load-bar"><div className="node-bar"></div></div>
     </div>
   )
 })`

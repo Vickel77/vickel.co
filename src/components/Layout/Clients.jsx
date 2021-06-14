@@ -6,7 +6,7 @@ const Clients =styled(({className}) =>{
         <h3>WANNA START A PROJECT?</h3>
       </div>
       <div className="second">
-        <a>
+        <a href="#">
           LET'S COLLABORATE
         </a>
       </div>
