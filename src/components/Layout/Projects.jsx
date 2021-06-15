@@ -39,7 +39,7 @@ const Projects = styled(({className}) =>{
 })`
   width: 100vw;
   padding: 100px 0;
-  margin-top: 100px;
+  margin-top: 50px;
 
 .projects-container {
   width: 85vw;

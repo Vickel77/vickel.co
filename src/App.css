@@ -1,4 +1,6 @@
 /* GLOBAL STYLES */
+@import url("https://fonts.googleapis.com/css2?family=Open+Sans&display=swap");
+
 :root {
   --primary: #19001a;
   --primaryLight: #8f0594;
@@ -11,7 +13,7 @@
   box-sizing: border-box;
 }
 body {
-  font-family: "century gothic";
+  font-family: "Open Sans", sans-serif;
   font-size: 1.5em;
   padding: 0;
   margin: 0;

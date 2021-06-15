@@ -1,6 +1,8 @@
 import styled from "styled-components";
 import Projects from "./Projects";
 import DevTools from "./DevTools";
+import Clients from "./Clients";
+import Mission from "./Mission";
 
 const Skill = styled(({className, percentage, stack, backEnd}) => {
   return (
@@ -186,8 +188,11 @@ const Skills = styled(({className}) => {
             <SkillsBar />
           </div>
         </div>
+        
         <Projects />
         <DevTools />
+        <Clients />
+        
       </div>
     </section>
   )
@@ -198,7 +203,6 @@ const Skills = styled(({className}) => {
   align-items: center;
   width: 100vw;
   overflow: hidden;
-  padding: 100px 0 200px;
   position:relative;
 
   .shape {
@@ -302,15 +306,6 @@ const Skills = styled(({className}) => {
   }
   .container h3 {
     padding:30px 0;
-  }
-  .container::before {
-    content: "";
-    position: absolute;
-    bottom: -100px;
-    left: 25%;
-    width: 50%;
-    height: 2.5px;
-    background-color: var(--primaryLight);
   }
   .skills {
     display: flex;
